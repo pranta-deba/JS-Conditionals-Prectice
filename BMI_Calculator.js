@@ -12,18 +12,18 @@ Create a JavaScript program that calculates the Body Mass Index (BMI) and assign
 
 */
 
-let weight = 76;
-let height = 6.8;
+let weight = 56;
+let height = 170; //cm
 
-let heightCal = height ** 2;
-const BMI = weight / heightCal;
+const BMI = (weight / (height / 100) ** 2).toFixed(1);
+let massage = "Your Body Mass Index is : " + BMI;
 
 if (BMI < 18.5) {
-  console.log("underweight");
+  console.log(massage + " , and underweight");
 } else if (BMI >= 18.5 && BMI <= 24.9) {
-  console.log("you are normal");
+  console.log(massage + " , and you are normal");
 } else if (BMI >= 25 && BMI <= 29.9) {
-  console.log("you are overweight");
+  console.log(massage + " , and you are overweight");
 } else {
-  console.log("you are obese");
+  console.log(massage + " , and you are obese");
 }
